@@ -2,10 +2,13 @@
 var fs = require('fs');
 var colors = require('colors');
 var argv = require('optimist')
-								.boolean(['g','i','m','y','h'])
-								.alias('h', 'help')
-								.alias('g', 'global')
-								.argv;
+		.boolean(['g','i','m','y','h'])
+		.alias('h', 'help')
+		.alias('g', 'global')
+		.alias('i', 'ignore')
+		.alias('m', 'multiline')
+		.alias('y', 'sticky')
+		.argv;
 
 var help = "usage:[options] [filename] [regex-pattern] [result-string] [result-file]\n\n" + 
 "a tool that helps you replace string patterns into text files using javascript's replace function reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace\n" + 
